@@ -10,13 +10,13 @@ public class App {
 		Thermostat stat = new Thermostat();
 		
 		try {
-			stat.setTemperature(40);
+			stat.setTemperature(-5);
 		} catch (TempoutToHighException e) {
 			//온도가 잦을 경우 처리 코드
 			System.out.println(e.getMessage());
-		} catch (TempoutToLowException e) {
+		} catch (TempoutToLowException a) {
 			//온도가 높을경우 처리 코드
-			System.out.println(e.getMessage());
+			System.out.println(a.getMessage());
 		}
 	}
 }
