@@ -10,7 +10,6 @@ import product.Chicken;
 import product.Cow;
 import product.Pig;
 import product.Product;
-import test.Account;
 
 import java.util.Random;
 
@@ -53,7 +52,7 @@ public class Main {
 	 */
 	private void display() throws InterruptedException {
 		System.out.println("어서 오세요");
-		System.out.println("정육 식당입니다\n");
+		System.out.println("정육 샵입니다\n");
 		Thread.sleep(400);
 		System.out.println("처음 이신가요? y / n");
 		System.out.print("방문 여부 : ");
@@ -131,7 +130,7 @@ public class Main {
 				} catch (Exception e) {
 					exit();
 				}
-
+				
 				System.out.print("번호 확인용 휴대폰 번호 8자리를 한번 더 입력하세요 : ");
 				scanner.nextLine();
 				String passwordCheck = scanner.nextLine();
