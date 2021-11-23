@@ -29,7 +29,7 @@ public class MFrame extends Frame{
 			}
 		});
 		setVisible(true);
-		setResizable(flag);
+		//setResizable(flag);
 	}
 
 }
