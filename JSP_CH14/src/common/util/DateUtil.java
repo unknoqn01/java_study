@@ -9,7 +9,7 @@ import java.util.GregorianCalendar;
 /**
  * <b>class : </b> DateUtil
  * <b>Class Description</b><br>
- * Date¸¦ Ã³¸®ÇÏ´Â Util Class
+ * Dateë¥¼ ì²˜ë¦¬í•˜ëŠ” Util Class
  * <b>History</b><br>
  */
 public class DateUtil{
@@ -21,7 +21,7 @@ public class DateUtil{
 	}
 	
 	/**
-	 * Æ÷¸äÀ» LongÅ¸ÀÔÀ¸·Î º¯È¯ÇØÁÖ´Â ¸Ş¼Òµå
+	 * í¬ë©§ì„ Longíƒ€ì…ìœ¼ë¡œ ë³€í™˜í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param format
 	 * @return long
@@ -32,7 +32,7 @@ public class DateUtil{
 	}
 	
 	/**
-	 * Æ÷¸äÀ» IntÅ¸ÀÔÀ¸·Î º¯È¯ÇØÁÖ´Â ¸Ş¼Òµå
+	 * í¬ë©§ì„ Intíƒ€ì…ìœ¼ë¡œ ë³€í™˜í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param format
 	 * @return int
@@ -43,7 +43,7 @@ public class DateUtil{
 	}
 	
 	/**
-	 * ³¯Â¥¸¦ "yyMMddmmssSSS"Çü½ÄÀ¸·Î ¹ß»ı½ÃÄÑÁÖ´Â ¸Ş¼Òµå
+	 * ë‚ ì§œë¥¼ "yyMMddmmssSSS"í˜•ì‹ìœ¼ë¡œ ë°œìƒì‹œì¼œì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @return long
 	 */
@@ -52,7 +52,7 @@ public class DateUtil{
 	}
 	
 	/**
-	 * Æ÷¸ËÇü½ÄÀÇ µ¥ÀÌÅÍ¸¦ ¹ß»ı½ÃÄÑÁÖ´Â ¸Ş¼Òµå
+	 * í¬ë§·í˜•ì‹ì˜ ë°ì´í„°ë¥¼ ë°œìƒì‹œì¼œì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param format
 	 * @return String
@@ -62,7 +62,7 @@ public class DateUtil{
 	}
 	
 	/**
-	 * Æ÷¸ËÇü½ÄÀÇ µ¥ÀÌÅÍ¸¦ currentTimeMillisÇüÅÂ·Î ¹ß»ı½ÃÄÑÁÖ´Â ¸Ş¼Òµå
+	 * í¬ë§·í˜•ì‹ì˜ ë°ì´í„°ë¥¼ currentTimeMillisí˜•íƒœë¡œ ë°œìƒì‹œì¼œì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param currentTimeMillis
 	 * @param format
@@ -74,11 +74,11 @@ public class DateUtil{
 	
 	/**
 	 *
-	 * ÇöÀç ³¯Â¥¿Í ½Ã°¢À» yyyy-MM-dd hh:mm:ss.fffffffff FormatÀÇ Timestamp ·Î  ReturnÇÑ´Ù.
+	 * í˜„ì¬ ë‚ ì§œì™€ ì‹œê°ì„ yyyy-MM-dd hh:mm:ss.fffffffff Formatì˜ Timestamp ë¡œ  Returní•œë‹¤.
 	 *
 	 * <pre>
 	 *
-	 * [»ç¿ë ¿¹Á¦]
+	 * [ì‚¬ìš© ì˜ˆì œ]
 	 *
 	 * CDateUtil.getCurrentTimeStamp()	===> 2004-02-24 13:22:11.734
 	 *
@@ -91,7 +91,7 @@ public class DateUtil{
 	}
 	
 	/**
-	 * Æ÷¸ËÇü½ÄÀÇ µ¥ÀÌÅÍ¸¦ currentTimeÇüÅÂ·Î ¹ß»ı½ÃÄÑÁÖ´Â ¸Ş¼Òµå
+	 * í¬ë§·í˜•ì‹ì˜ ë°ì´í„°ë¥¼ currentTimeí˜•íƒœë¡œ ë°œìƒì‹œì¼œì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param currentTime
 	 * @param format
@@ -185,7 +185,7 @@ public class DateUtil{
 	}
 	
 	/**
-	 * Æ÷¸ËÇüÅÂ·Î ÇöÀç³¯Â¥¸¦ ¹ß»ı½ÃÄÑÁÖ´Â ¸Ş¼Òµå
+	 * í¬ë§·í˜•íƒœë¡œ í˜„ì¬ë‚ ì§œë¥¼ ë°œìƒì‹œì¼œì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param format
 	 * @return String
@@ -201,7 +201,7 @@ public class DateUtil{
 	}
 	
 	/**
-	 * Æ÷¸ËÇüÅÂ·Î date¿¡ ÇØ´çÇÏ´Â ³¯Â¥¸¦ ¹ß»ı½ÃÄÑÁÖ´Â ¸Ş¼Òµå
+	 * í¬ë§·í˜•íƒœë¡œ dateì— í•´ë‹¹í•˜ëŠ” ë‚ ì§œë¥¼ ë°œìƒì‹œì¼œì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param format
 	 * @return String
@@ -381,11 +381,11 @@ public class DateUtil{
 	}
 	
 	/**
-	 * ³¯Â¥¸¦ Æ÷¸ËÇü½ÄÀ¸·Î Ä¡È¯ÇØÁÖ´Â ¸Ş¼Òµå
+	 * ë‚ ì§œë¥¼ í¬ë§·í˜•ì‹ìœ¼ë¡œ ì¹˜í™˜í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
-	 * @param format        Æ÷¸Ë Çü½Ä
-	 * @param data          ³¯Â¥
-	 * @return String       Æ÷¸ËÇü½ÄÀ¸·Î Ä¡È¯µÈ ³¯Â¥ °ª
+	 * @param format        í¬ë§· í˜•ì‹
+	 * @param data          ë‚ ì§œ
+	 * @return String       í¬ë§·í˜•ì‹ìœ¼ë¡œ ì¹˜í™˜ëœ ë‚ ì§œ ê°’
 	 */
 	public static String getDateFormat(int format, String data){
 		try{
@@ -450,7 +450,7 @@ public class DateUtil{
 				break;
 			case 102: // 'f'
 				sdf = new SimpleDateFormat(
-				"yyyy'³â' MM'¿ù' dd'ÀÏ' a HH:mm:ss");
+				"yyyy'ë…„' MM'ì›”' dd'ì¼' a HH:mm:ss");
 				break;
 			case 109: // 'm'
 				sdf = new SimpleDateFormat("HH:mm:ss MM'-'dd' 'yyyy");
@@ -494,10 +494,10 @@ public class DateUtil{
 	}
 	
 	/**
-	 * ¿äÀÏÀ» intÇü½ÄÀ¸·Î Ç¥ÇöÇØÁÖ´Â ¸Ş¼Òµå
+	 * ìš”ì¼ì„ intí˜•ì‹ìœ¼ë¡œ í‘œí˜„í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param data
-	 * @return int      ÇØ´ç ³¯Â¥¸¦ Ç¥ÇöÇÑ int
+	 * @return int      í•´ë‹¹ ë‚ ì§œë¥¼ í‘œí˜„í•œ int
 	 */
 	public static int getDayOfWeek(String data){
 		try{
@@ -522,11 +522,11 @@ public class DateUtil{
 	}
 	
 	/**
-	 * µÎ ³¯Â¥ »çÀÌÀÇ Â÷¸¦ ¸®ÅÏÇØÁÖ´Â ¹®ÀÚ¿­
+	 * ë‘ ë‚ ì§œ ì‚¬ì´ì˜ ì°¨ë¥¼ ë¦¬í„´í•´ì£¼ëŠ” ë¬¸ìì—´
 	 *
 	 * @param strYYYYMMDD11
 	 * @param strYYYYMMDD22
-	 * @return int      ³¯Â¥ »çÀÌÀÇ Â÷
+	 * @return int      ë‚ ì§œ ì‚¬ì´ì˜ ì°¨
 	 */
 	public static int days_between(String strYYYYMMDD11, String strYYYYMMDD22){
 		String strYYYYMMDD1 = delDot(strYYYYMMDD11);
@@ -546,10 +546,10 @@ public class DateUtil{
 	}
 	
 	/**
-	 * ³ªÀÌ °è»ê
+	 * ë‚˜ì´ ê³„ì‚°
 	 *
 	 * @param strYYYYMMDD
-	 * @return int      ³ªÀÌ
+	 * @return int      ë‚˜ì´
 	 */
 	public static int old_between(String strYYYYMMDD){
 		String strYYYYMMDD1 = delDot(strYYYYMMDD);
@@ -603,14 +603,14 @@ public class DateUtil{
 	}
 	
 	/**
-	 * µÎ ³¯Â¥ »çÀÌÀÇ Â÷¸¦ ¸®ÅÏÇØÁÖ´Â ¹®ÀÚ¿­
+	 * ë‘ ë‚ ì§œ ì‚¬ì´ì˜ ì°¨ë¥¼ ë¦¬í„´í•´ì£¼ëŠ” ë¬¸ìì—´
 	 * @param year1
 	 * @param month1
 	 * @param day1
 	 * @param year2
 	 * @param month2
 	 * @param day2
-	 * @return int      ³¯Â¥ »çÀÌÀÇ Â÷
+	 * @return int      ë‚ ì§œ ì‚¬ì´ì˜ ì°¨
 	 */
 	public static int days_between(int year1, int month1, int day1, int year2,
 			int month2, int day2){
@@ -643,10 +643,10 @@ public class DateUtil{
 	}
 	
 	/**
-	 *  ¹®ÀÚ¿­¿¡¼­ '.'À» Á¦°ÅÇÏ´Â ¸Ş¼Òµå
+	 *  ë¬¸ìì—´ì—ì„œ '.'ì„ ì œê±°í•˜ëŠ” ë©”ì†Œë“œ
 	 *
-	 * @param str       Ä¡È¯´ë»ó ¹®ÀÚ¿­
-	 * @return String   '.'ÀÌ Á¦°ÅµÈ ¹®ÀÚ¿­
+	 * @param str       ì¹˜í™˜ëŒ€ìƒ ë¬¸ìì—´
+	 * @return String   '.'ì´ ì œê±°ëœ ë¬¸ìì—´
 	 */
 	public static String delDot(String str){
 		if(str == null){
@@ -668,9 +668,9 @@ public class DateUtil{
 	}
 	
 	/**
-	 * ¿äÀÏÀ» intÇü½ÄÀ¸·Î Ç¥ÇöÇØÁÖ´Â ¸Ş¼Òµå
+	 * ìš”ì¼ì„ intí˜•ì‹ìœ¼ë¡œ í‘œí˜„í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
-	 * @return int  ÇØ´ç ³¯Â¥¸¦ Ç¥ÇöÇÑ int
+	 * @return int  í•´ë‹¹ ë‚ ì§œë¥¼ í‘œí˜„í•œ int
 	 */
 	public static int getDayOfWeek(){
 		try{
@@ -682,12 +682,12 @@ public class DateUtil{
 	}
 	
 	/**
-	 * Date¸¦ ÀÔ·Â¹Ş¾Æ À½·ÂÀ¸·Î Ä¡È¯ÇØÁÖ´Â ¸Ş¼Òµå
+	 * Dateë¥¼ ì…ë ¥ë°›ì•„ ìŒë ¥ìœ¼ë¡œ ì¹˜í™˜í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param year1
 	 * @param month1
 	 * @param day1
-	 * @return String   À½·ÂÀ¸·Î Ä¡È¯µÈ Date ¹®ÀÚ¿­
+	 * @return String   ìŒë ¥ìœ¼ë¡œ ì¹˜í™˜ëœ Date ë¬¸ìì—´
 	 */
 	public static String calcToLunar(String year1, String month1, String day1){
 		String sResult = "";
@@ -722,7 +722,7 @@ public class DateUtil{
 		sunDay = Integer.parseInt(day1);
 		if(!verifyDate(sunYear, sunMonth, sunDay)){
 			return
-			"³¯Â¥ Çü½ÄÀÌ ¸ÂÁö ¾Ê½À´Ï´Ù.";
+			"ë‚ ì§œ í˜•ì‹ì´ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤.";
 		}
 		k11 = sunYear - 1;
 		td2 = ( (k11 * 365L + k11 / 4L) - k11 / 100L) + k11 / 400L;
@@ -792,7 +792,7 @@ public class DateUtil{
 	}
 	
 	/**
-	 * ³¯Â¥¸¦ °ËÁõÇØÁÖ´Â ¸Ş¼Òµå
+	 * ë‚ ì§œë¥¼ ê²€ì¦í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param year
 	 * @param month
@@ -835,7 +835,7 @@ public class DateUtil{
 	public static final int HALF_HOLIDAY = 10002;
 	public static final int HOLIDAY = 10003;
 	private static Date initDate = null;
-	private static final String errMsg = "³¯Â¥ Çü½ÄÀÌ ¸ÂÁö ¾Ê½À´Ï´Ù.";
+	private static final String errMsg = "ë‚ ì§œ í˜•ì‹ì´ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤.";
 	private static int sunYear;
 	private static int sunMonth;
 	private static int sunDay;
@@ -869,9 +869,9 @@ public class DateUtil{
 		"\uC2E0", "\uC784", "\uACC4"
 	};
 	private static final String saJi[] = {
-		"1¿ù", "2¿ù", "3¿ù", "4¿ù", "5¿ù", "6¿ù", "7¿ù",
-		"8¿ù", "9¿ù", "10¿ù",
-		"11¿ù", "12¿ù"
+		"1ì›”", "2ì›”", "3ì›”", "4ì›”", "5ì›”", "6ì›”", "7ì›”",
+		"8ì›”", "9ì›”", "10ì›”",
+		"11ì›”", "12ì›”"
 	};
 	private static final String saJiNm[] = {
 		"\uC950", "\uC18C", "\uD638\uB791\uC774", "\uD1A0\uB07C", "\uC6A9",
@@ -883,7 +883,7 @@ public class DateUtil{
 		30, 31
 	};
 	private static final String week[] = {
-		"ÀÏ", "¿ù", "È­", "¼ö", "¸ñ", "±İ", "Åä"
+		"ì¼", "ì›”", "í™”", "ìˆ˜", "ëª©", "ê¸ˆ", "í† "
 	};
 	private static final int monthDigit[] = {
 		1, 2, 1, 2, 1, 2, 2, 3, 2, 2,
@@ -1101,9 +1101,9 @@ public class DateUtil{
 	};
 	
 	/**
-	 * VISIT DATE ¸¦ °ËÁõÇØÁÖ´Â ¸Ş¼Òµå
+	 * VISIT DATE ë¥¼ ê²€ì¦í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
-	 * @param Visit ¼ø¹ø
+	 * @param Visit ìˆœë²ˆ
 	 * @param visit date
 	 */
 	public static int visitdateCheck(int visitday, String visitDate){
@@ -1136,9 +1136,9 @@ public class DateUtil{
 	}
 	
 	/**
-	 * VISIT DATE ¸¦ °ËÁõÇØÁÖ´Â ¸Ş¼Òµå
+	 * VISIT DATE ë¥¼ ê²€ì¦í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
-	 * @param Visit ¼ø¹ø
+	 * @param Visit ìˆœë²ˆ
 	 * @param visit date
 	 */
 	public static String visitdate(int visitday, String visitDate){

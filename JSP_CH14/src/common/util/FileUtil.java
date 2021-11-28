@@ -11,15 +11,15 @@ public class FileUtil {
 	private static File file = null;
 
 	/**
-	 * µğ·ºÅä¸®³ª ÆÄÀÏÀÇ °æ·Î¿Í ÀÌ¸§À» ÀÔ·Â¹Ş¾Æ File °´Ã¼¸¦ ¸®ÅÏÇÑ´Ù.
+	 * ë””ë ‰í† ë¦¬ë‚˜ íŒŒì¼ì˜ ê²½ë¡œì™€ ì´ë¦„ì„ ì…ë ¥ë°›ì•„ File ê°ì²´ë¥¼ ë¦¬í„´í•œë‹¤.
 	 *
-	 * @param String path   ÆÄÀÏ È¤Àº µğ·ºÅä¸® À§Ä¡ °æ·Î
-	 * @param String name   ÆÄÀÏ È¤Àº µğ·ºÅä¸®¸í
+	 * @param String path   íŒŒì¼ í˜¹ì€ ë””ë ‰í† ë¦¬ ìœ„ì¹˜ ê²½ë¡œ
+	 * @param String name   íŒŒì¼ í˜¹ì€ ë””ë ‰í† ë¦¬ëª…
 	 * @return File
 	 */
 	public static File checkNull(String path, String name) throws Exception {
 		try {
-			/* µğ·ºÅä¸®³ª ÆÄÀÏÀÇ °æ·Î¿Í ÀÌ¸§ÀÇ null¿©ºÎ¸¦ Ã¼Å©. Á¶°Ç¿¡ ¸Â´Â FileÀ» »ı¼º */
+			/* ë””ë ‰í† ë¦¬ë‚˜ íŒŒì¼ì˜ ê²½ë¡œì™€ ì´ë¦„ì˜ nullì—¬ë¶€ë¥¼ ì²´í¬. ì¡°ê±´ì— ë§ëŠ” Fileì„ ìƒì„± */
 			if (name == "")
 				file = new File(path);
 			else
@@ -27,61 +27,61 @@ public class FileUtil {
 			return file;
 		}
 		catch (Exception ex) {
-			System.out.println("FileUtil : checkNull()Áß ¿¡·¯ ¹ß»ı");
+			System.out.println("FileUtil : checkNull()ì¤‘ ì—ëŸ¬ ë°œìƒ");
 		}
 		return file;
 	}
 
 	/**
-	 * »ı¼º ´ë»ó µğ·ºÅä¸® À§Ä¡¿Í ÆÄÀÏ¸íÀ¸·Î ÇØ´ç Á¤º¸ÀÇ ÆÄÀÏÀ» »ı¼ºÇÑ´Ù.
+	 * ìƒì„± ëŒ€ìƒ ë””ë ‰í† ë¦¬ ìœ„ì¹˜ì™€ íŒŒì¼ëª…ìœ¼ë¡œ í•´ë‹¹ ì •ë³´ì˜ íŒŒì¼ì„ ìƒì„±í•œë‹¤.
 	 *
-	 * @param String filePath   »ı¼º ´ë»ó ÆÄÀÏ À§Ä¡ °æ·Î
-	 * @param String fileName   »ı¼º ´ë»ó ÆÄÀÏ¸í
+	 * @param String filePath   ìƒì„± ëŒ€ìƒ íŒŒì¼ ìœ„ì¹˜ ê²½ë¡œ
+	 * @param String fileName   ìƒì„± ëŒ€ìƒ íŒŒì¼ëª…
 	 * @exception IOException
 	 */
 	public static void fileCreate(String filePath, String fileName) throws Exception {
 
-		/* filePathÀÇ µğ·ºÅä¸® »ı¼º */
+		/* filePathì˜ ë””ë ‰í† ë¦¬ ìƒì„± */
 		dirCreate(filePath);
 		file = new File(filePath, fileName);
 
 		try {
-			/* ÇØ´ç°æ·Î¿¡ ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾ÊÀ¸¸é »õ·Î¿î ÆÄÀÏÀ» »ı¼º */
+			/* í•´ë‹¹ê²½ë¡œì— íŒŒì¼ì´ ì¡´ì¬í•˜ì§€ ì•Šìœ¼ë©´ ìƒˆë¡œìš´ íŒŒì¼ì„ ìƒì„± */
 			if (!file.exists())
 				file.createNewFile();
 		}
 		catch (IOException ioe) {
-			System.out.println("FileUtil : fileCreate()Áß ¿¡·¯ ¹ß»ı");
+			System.out.println("FileUtil : fileCreate()ì¤‘ ì—ëŸ¬ ë°œìƒ");
 		}
 	}
 
 	/**
-	 * »ı¼º ´ë»ó µğ·ºÅä¸® À§Ä¡¿Í µğ·ºÅä¸®¸íÀ¸·Î ÇØ´ç Á¤º¸ÀÇ µğ·ºÅä¸®¸¦ »ı¼ºÇÑ´Ù.
+	 * ìƒì„± ëŒ€ìƒ ë””ë ‰í† ë¦¬ ìœ„ì¹˜ì™€ ë””ë ‰í† ë¦¬ëª…ìœ¼ë¡œ í•´ë‹¹ ì •ë³´ì˜ ë””ë ‰í† ë¦¬ë¥¼ ìƒì„±í•œë‹¤.
 	 *
-	 * @param String dirPath    »ı¼º ´ë»ó µğ·ºÅä¸® À§Ä¡ °æ·Î
-	 * @param String dirName    »ı¼º ´ë»ó µğ·ºÅä¸®¸í
+	 * @param String dirPath    ìƒì„± ëŒ€ìƒ ë””ë ‰í† ë¦¬ ìœ„ì¹˜ ê²½ë¡œ
+	 * @param String dirName    ìƒì„± ëŒ€ìƒ ë””ë ‰í† ë¦¬ëª…
 	 * @return void
 	 */
 	public static void dirCreate(String dirPath, String dirName) throws Exception {
 		try {
-			/* ÀÎÀÚÀÇ null ¿©ºÎ¸¦ Ã¼Å©ÇØ File »ı¼º */
+			/* ì¸ìì˜ null ì—¬ë¶€ë¥¼ ì²´í¬í•´ File ìƒì„± */
 			file = checkNull(dirPath, dirName);
 
-			/* ÇØ´ç °æ·Î¿¡ µğ·ºÅä¸®°¡ Á¸ÀçÇÏÁö ¾ÊÀ» °æ¿ì µğ·ºÅä¸® »ı¼º */
+			/* í•´ë‹¹ ê²½ë¡œì— ë””ë ‰í† ë¦¬ê°€ ì¡´ì¬í•˜ì§€ ì•Šì„ ê²½ìš° ë””ë ‰í† ë¦¬ ìƒì„± */
 			if (!file.isDirectory()) {
 				//file.mkdir();
 				file.mkdirs();
 			}
 		}
 		catch (Exception ex) {
-			System.out.println("FileUtil : dirCreate()Áß ¿¡·¯ ¹ß»ı");
+			System.out.println("FileUtil : dirCreate()ì¤‘ ì—ëŸ¬ ë°œìƒ");
 		}
 	}
 
 	/**
-	 * »ı¼º ´ë»ó µğ·ºÅä¸® À§Ä¡¿¡ ºó µğ·ºÅä¸®¸¦ »ı¼ºÇÑ´Ù.
+	 * ìƒì„± ëŒ€ìƒ ë””ë ‰í† ë¦¬ ìœ„ì¹˜ì— ë¹ˆ ë””ë ‰í† ë¦¬ë¥¼ ìƒì„±í•œë‹¤.
 	 *
-	 * @param String dirPath    »ı¼º ´ë»ó µğ·ºÅä¸® À§Ä¡ °æ·Î
+	 * @param String dirPath    ìƒì„± ëŒ€ìƒ ë””ë ‰í† ë¦¬ ìœ„ì¹˜ ê²½ë¡œ
 	 * @return void
 	 */
 	public static void dirCreate(String dirPath) throws Exception {
@@ -89,41 +89,41 @@ public class FileUtil {
 			dirCreate(dirPath, "");
 		}
 		catch (Exception ex) {
-			System.out.println("FileUtil : dirCreate()Áß ¿¡·¯ ¹ß»ı");
+			System.out.println("FileUtil : dirCreate()ì¤‘ ì—ëŸ¬ ë°œìƒ");
 		}
 	}
 
 	/**
-	 * µğ·ºÅä¸® È¤Àº ÆÄÀÏÀÇ ÀÌ¸§À» ¼öÁ¤ÇÑ´Ù.
+	 * ë””ë ‰í† ë¦¬ í˜¹ì€ íŒŒì¼ì˜ ì´ë¦„ì„ ìˆ˜ì •í•œë‹¤.
 	 *
-	 * @param String filePath       ¼öÁ¤ ´ë»ó ÆÄÀÏ À§Ä¡ °æ·Î
-	 * @param String fileOldName    ¼öÁ¤ ´ë»ó ÆÄÀÏÀÇ ÇöÀç ÀÌ¸§
-	 * @param String fileNewName    ¼öÁ¤ ´ë»ó ÆÄÀÏÀÇ »õ ÀÌ¸§
+	 * @param String filePath       ìˆ˜ì • ëŒ€ìƒ íŒŒì¼ ìœ„ì¹˜ ê²½ë¡œ
+	 * @param String fileOldName    ìˆ˜ì • ëŒ€ìƒ íŒŒì¼ì˜ í˜„ì¬ ì´ë¦„
+	 * @param String fileNewName    ìˆ˜ì • ëŒ€ìƒ íŒŒì¼ì˜ ìƒˆ ì´ë¦„
 	 */
 	public static void fileUpdate(String filePath, String fileOldName, String fileNewName) throws Exception {
 		try {
 			File oldFile = null;
 			File newFile = null;
 
-			/* ÀÎÀÚÀÇ null ¿©ºÎ¸¦ Ã¼Å©ÇØ File »ı¼º */
+			/* ì¸ìì˜ null ì—¬ë¶€ë¥¼ ì²´í¬í•´ File ìƒì„± */
 			oldFile = checkNull(filePath, fileOldName);
 			newFile = checkNull(filePath, fileNewName);
 
-			/* ÆÄÀÏÀÌ³ª µğ·ºÅä¸®ÀÇ ÀÌ¸§À» ¼öÁ¤ */
+			/* íŒŒì¼ì´ë‚˜ ë””ë ‰í† ë¦¬ì˜ ì´ë¦„ì„ ìˆ˜ì • */
 			if (oldFile.renameTo(newFile))
-				System.out.println(filePath + "Æú´õÀÇ " + fileOldName + "ÆÄÀÏÀÌ " + fileNewName + "ÆÄÀÏ·Î ¼öÁ¤µÇ¾ú½À´Ï´Ù.");
+				System.out.println(filePath + "í´ë”ì˜ " + fileOldName + "íŒŒì¼ì´ " + fileNewName + "íŒŒì¼ë¡œ ìˆ˜ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		}
 		catch (Exception ex) {
-			System.out.println("FileUtil : fileUpdate()Áß ¿¡·¯ ¹ß»ı");
+			System.out.println("FileUtil : fileUpdate()ì¤‘ ì—ëŸ¬ ë°œìƒ");
 		}
 	}
 
 	/**
-	 * Æ¯Á¤ À§Ä¡¿¡ Á¸ÀçÇÏ´Â ÆÄÀÏÀ» ÁöÁ¤ À§Ä¡ÀÇ µğ·ºÅä¸®¿¡ º¹»çÇÑ´Ù.
+	 * íŠ¹ì • ìœ„ì¹˜ì— ì¡´ì¬í•˜ëŠ” íŒŒì¼ì„ ì§€ì • ìœ„ì¹˜ì˜ ë””ë ‰í† ë¦¬ì— ë³µì‚¬í•œë‹¤.
 	 *
-	 * @param String dirOldPath     º¹»ç ´ë»ó ÆÄÀÏÀÇ ÇöÀç µğ·ºÅä¸® À§Ä¡ °æ·Î
-	 * @param String dirNewPath     º¹»ç ´ë»ó ÆÄÀÏÀÇ »õ µğ·ºÅä¸® À§Ä¡ °æ·Î
-	 * @param String fileName       º¹»ç ´ë»ó ÆÄÀÏÀÇ ÀÌ¸§
+	 * @param String dirOldPath     ë³µì‚¬ ëŒ€ìƒ íŒŒì¼ì˜ í˜„ì¬ ë””ë ‰í† ë¦¬ ìœ„ì¹˜ ê²½ë¡œ
+	 * @param String dirNewPath     ë³µì‚¬ ëŒ€ìƒ íŒŒì¼ì˜ ìƒˆ ë””ë ‰í† ë¦¬ ìœ„ì¹˜ ê²½ë¡œ
+	 * @param String fileName       ë³µì‚¬ ëŒ€ìƒ íŒŒì¼ì˜ ì´ë¦„
 	 * @exception IOException
 	 */
 	public static void fileCopy(String dirOldPath, String dirNewPath, String fileName) throws Exception {
@@ -132,19 +132,19 @@ public class FileUtil {
 		File out = null;
 
 		try {
-			/* ÀÎÀÚÀÇ null ¿©ºÎ¸¦ Ã¼Å©ÇØ File »ı¼º */
+			/* ì¸ìì˜ null ì—¬ë¶€ë¥¼ ì²´í¬í•´ File ìƒì„± */
 			in = checkNull(dirOldPath, fileName);
 			out = checkNull(dirNewPath, "");
 			
 			if(in.exists()) {
-				/* º¹»ç ´ë»ó µğ·ºÅä¸®°¡ Á¸ÀçÇÏÁö ¾ÊÀ»½Ã ÇØ´ç °æ·Î¿¡ µğ·ºÅä¸® »ı¼º */
+				/* ë³µì‚¬ ëŒ€ìƒ ë””ë ‰í† ë¦¬ê°€ ì¡´ì¬í•˜ì§€ ì•Šì„ì‹œ í•´ë‹¹ ê²½ë¡œì— ë””ë ‰í† ë¦¬ ìƒì„± */
 				if (!out.isDirectory())
 					out.mkdirs();
 	
-				/* º¹»ç ´ë»ó µğ·ºÅä¸®¿¡ º¹»çÇÒ ÆÄÀÏ¸íÀ¸·Î File»ı¼º */
+				/* ë³µì‚¬ ëŒ€ìƒ ë””ë ‰í† ë¦¬ì— ë³µì‚¬í•  íŒŒì¼ëª…ìœ¼ë¡œ Fileìƒì„± */
 				out = new File(dirNewPath, fileName);
 	
-				/* º¹»ç ´ë»ó ÆÄÀÏÀÇ ³»¿ëÀ» ÀĞ¾îµé¿© º¹»ç ´ë»ó µğ·ºÅä¸®¿¡ ÆÄÀÏ º¹»ç */
+				/* ë³µì‚¬ ëŒ€ìƒ íŒŒì¼ì˜ ë‚´ìš©ì„ ì½ì–´ë“¤ì—¬ ë³µì‚¬ ëŒ€ìƒ ë””ë ‰í† ë¦¬ì— íŒŒì¼ ë³µì‚¬ */
 				FileInputStream fis = new FileInputStream(in);
 				FileOutputStream fos = new FileOutputStream(out);
 	
@@ -160,17 +160,17 @@ public class FileUtil {
 			}
 		}
 		catch (IOException ioe) {
-			System.out.println("FileUtil : fileCopy()Áß ¿¡·¯ ¹ß»ı");
+			System.out.println("FileUtil : fileCopy()ì¤‘ ì—ëŸ¬ ë°œìƒ");
 		}
 	}
 
 	/**
-	 * Æ¯Á¤ À§Ä¡¿¡ Á¸ÀçÇÏ´Â ÆÄÀÏÀ» ÁöÁ¤ À§Ä¡ÀÇ µğ·ºÅä¸®¿¡ »õ·Î¿î ÀÌ¸§À¸·Î º¹»çÇÑ´Ù.
+	 * íŠ¹ì • ìœ„ì¹˜ì— ì¡´ì¬í•˜ëŠ” íŒŒì¼ì„ ì§€ì • ìœ„ì¹˜ì˜ ë””ë ‰í† ë¦¬ì— ìƒˆë¡œìš´ ì´ë¦„ìœ¼ë¡œ ë³µì‚¬í•œë‹¤.
 	 *
-	 * @param String dirOldPath     º¹»ç ´ë»ó ÆÄÀÏÀÇ ÇöÀç µğ·ºÅä¸® À§Ä¡ °æ·Î
-	 * @param String dirNewPath     º¹»ç ´ë»ó ÆÄÀÏÀÇ »õ µğ·ºÅä¸® À§Ä¡ °æ·Î
-	 * @param String fileName       º¹»ç ´ë»ó ÆÄÀÏÀÇ ÀÌ¸§
-	 * @param String fileRename     º¹»ç ´ë»ó ÆÄÀÏÀÇ »õ·Î¿îÀÌ¸§ 
+	 * @param String dirOldPath     ë³µì‚¬ ëŒ€ìƒ íŒŒì¼ì˜ í˜„ì¬ ë””ë ‰í† ë¦¬ ìœ„ì¹˜ ê²½ë¡œ
+	 * @param String dirNewPath     ë³µì‚¬ ëŒ€ìƒ íŒŒì¼ì˜ ìƒˆ ë””ë ‰í† ë¦¬ ìœ„ì¹˜ ê²½ë¡œ
+	 * @param String fileName       ë³µì‚¬ ëŒ€ìƒ íŒŒì¼ì˜ ì´ë¦„
+	 * @param String fileRename     ë³µì‚¬ ëŒ€ìƒ íŒŒì¼ì˜ ìƒˆë¡œìš´ì´ë¦„ 
 	 * @exception IOException
 	 */
 	public static void fileCopy(String dirOldPath, String dirNewPath, String fileName, String fileRename) throws Exception {
@@ -179,19 +179,19 @@ public class FileUtil {
 		File out = null;
 
 		try {
-			/* ÀÎÀÚÀÇ null ¿©ºÎ¸¦ Ã¼Å©ÇØ File »ı¼º */
+			/* ì¸ìì˜ null ì—¬ë¶€ë¥¼ ì²´í¬í•´ File ìƒì„± */
 			in = checkNull(dirOldPath, fileName);
 			out = checkNull(dirNewPath, "");
 			
 			if(in.exists()) {
-				/* º¹»ç ´ë»ó µğ·ºÅä¸®°¡ Á¸ÀçÇÏÁö ¾ÊÀ»½Ã ÇØ´ç °æ·Î¿¡ µğ·ºÅä¸® »ı¼º */
+				/* ë³µì‚¬ ëŒ€ìƒ ë””ë ‰í† ë¦¬ê°€ ì¡´ì¬í•˜ì§€ ì•Šì„ì‹œ í•´ë‹¹ ê²½ë¡œì— ë””ë ‰í† ë¦¬ ìƒì„± */
 				if (!out.isDirectory())
 					out.mkdirs();
 	
-				/* º¹»ç ´ë»ó µğ·ºÅä¸®¿¡ º¹»çÇÒ ÆÄÀÏ¸íÀ¸·Î File»ı¼º */
+				/* ë³µì‚¬ ëŒ€ìƒ ë””ë ‰í† ë¦¬ì— ë³µì‚¬í•  íŒŒì¼ëª…ìœ¼ë¡œ Fileìƒì„± */
 				out = new File(dirNewPath, fileRename);
 	
-				/* º¹»ç ´ë»ó ÆÄÀÏÀÇ ³»¿ëÀ» ÀĞ¾îµé¿© º¹»ç ´ë»ó µğ·ºÅä¸®¿¡ ÆÄÀÏ º¹»ç */
+				/* ë³µì‚¬ ëŒ€ìƒ íŒŒì¼ì˜ ë‚´ìš©ì„ ì½ì–´ë“¤ì—¬ ë³µì‚¬ ëŒ€ìƒ ë””ë ‰í† ë¦¬ì— íŒŒì¼ ë³µì‚¬ */
 				FileInputStream fis = new FileInputStream(in);
 				FileOutputStream fos = new FileOutputStream(out);
 	
@@ -207,45 +207,45 @@ public class FileUtil {
 			}
 		}
 		catch (IOException ioe) {
-			System.out.println("FileUtil : fileCopy()Áß ¿¡·¯ ¹ß»ı");
+			System.out.println("FileUtil : fileCopy()ì¤‘ ì—ëŸ¬ ë°œìƒ");
 		}
 	}
 	
 	/**
-	 * ÁöÁ¤ À§Ä¡ÀÇ µğ·ºÅä¸® È¤Àº ÆÄÀÏÀ» »èÁ¦ÇÑ´Ù.
+	 * ì§€ì • ìœ„ì¹˜ì˜ ë””ë ‰í† ë¦¬ í˜¹ì€ íŒŒì¼ì„ ì‚­ì œí•œë‹¤.
 	 *
-	 * @param String path   »èÁ¦ ´ë»ó ÆÄÀÏÀÇ À§Ä¡ °æ·Î
-	 * @param String name   »èÁ¦ ´ë»ó ÆÄÀÏ¸í
+	 * @param String path   ì‚­ì œ ëŒ€ìƒ íŒŒì¼ì˜ ìœ„ì¹˜ ê²½ë¡œ
+	 * @param String name   ì‚­ì œ ëŒ€ìƒ íŒŒì¼ëª…
 	 */
 	public static void fileDelete(String path, String name) throws Exception {
 		try {
-			/* ÀÎÀÚÀÇ null ¿©ºÎ¸¦ Ã¼Å©ÇØ File »ı¼º */
+			/* ì¸ìì˜ null ì—¬ë¶€ë¥¼ ì²´í¬í•´ File ìƒì„± */
 			file = checkNull(path, name);
 
 			if (file.exists()) {
 
-				/* ÆÄÀÏÀÌ Á¸ÀçÇÒ °æ¿ì ÇØ´ç µğ·ºÅä¸®°¡ ´ã°í ÀÖ´Â ÆÄÀÏÀÇ ¸®½ºÆ®¸¦ ÃßÃâ */
+				/* íŒŒì¼ì´ ì¡´ì¬í•  ê²½ìš° í•´ë‹¹ ë””ë ‰í† ë¦¬ê°€ ë‹´ê³  ìˆëŠ” íŒŒì¼ì˜ ë¦¬ìŠ¤íŠ¸ë¥¼ ì¶”ì¶œ */
 				String[] fileList = file.list();
 
-				/* ÆÄÀÏ¸®½ºÆ®¸¦ for¹®À¸·Î µ¹¸®¸é¼­ µğ·ºÅä¸® ³»ºÎÀÇ ÆÄÀÏÀ» »èÁ¦ */
+				/* íŒŒì¼ë¦¬ìŠ¤íŠ¸ë¥¼ forë¬¸ìœ¼ë¡œ ëŒë¦¬ë©´ì„œ ë””ë ‰í† ë¦¬ ë‚´ë¶€ì˜ íŒŒì¼ì„ ì‚­ì œ */
 				if (file.isDirectory() && (fileList.length != 0)) {
 					for (int index = 0; index < fileList.length; index++) {
 						File chileFile = checkNull(file.getAbsolutePath(), "");
 						if (chileFile.isDirectory())
 
-							/* ÆÄÀÏ¸®½ºÆ®ÀÇ ÀÎÀÚ°¡ µğ·ºÅä¸®ÀÏ °æ¿ì ÇØ´ç µğ·ºÅä¸®ÀÇ ³»ºÎ¸¦ °Ë»ç*/
+							/* íŒŒì¼ë¦¬ìŠ¤íŠ¸ì˜ ì¸ìê°€ ë””ë ‰í† ë¦¬ì¼ ê²½ìš° í•´ë‹¹ ë””ë ‰í† ë¦¬ì˜ ë‚´ë¶€ë¥¼ ê²€ì‚¬*/
 							deleteChild(chileFile, fileList[index]);
 						else if (chileFile.isFile())
 							chileFile.delete();
 					}
 				}
 
-				/* ¸®½ºÆ® ÆÄÀÏÀ» ÀüºÎ »èÁ¦ÇÑ ºó µğ·ºÅä¸® »èÁ¦ */
+				/* ë¦¬ìŠ¤íŠ¸ íŒŒì¼ì„ ì „ë¶€ ì‚­ì œí•œ ë¹ˆ ë””ë ‰í† ë¦¬ ì‚­ì œ */
 				file.delete();
 			}
 		}
 		catch (Exception ex) {
-			System.out.println("FileUtil : fileDelete()Áß ¿¡·¯ ¹ß»ı");
+			System.out.println("FileUtil : fileDelete()ì¤‘ ì—ëŸ¬ ë°œìƒ");
 		}
 	}
 
@@ -254,23 +254,23 @@ public class FileUtil {
 			fileDelete(path, "");
 		}
 		catch (Exception ex) {
-			System.out.println("FileUtil : fileDelete()Áß ¿¡·¯ ¹ß»ı");
+			System.out.println("FileUtil : fileDelete()ì¤‘ ì—ëŸ¬ ë°œìƒ");
 		}
 	}
 
 	/**
-	 * µğ·ºÅä¸® »èÁ¦ ½Ã µğ·ºÅä¸®ÀÇ ³»ºÎ¿¡ Á¸ÀçÇÏ´Â ÆÄÀÏÀ» ¸ÕÀú »èÁ¦ÇÏ°í ºó µğ·ºÅä¸®¸¦ »èÁ¦ÇÑ´Ù.
+	 * ë””ë ‰í† ë¦¬ ì‚­ì œ ì‹œ ë””ë ‰í† ë¦¬ì˜ ë‚´ë¶€ì— ì¡´ì¬í•˜ëŠ” íŒŒì¼ì„ ë¨¼ì € ì‚­ì œí•˜ê³  ë¹ˆ ë””ë ‰í† ë¦¬ë¥¼ ì‚­ì œí•œë‹¤.
 	 *
-	 * @param file      »èÁ¦ ´ë»ó µğ·ºÅä¸® Á¤º¸·Î »ı¼ºµÈ File
-	 * @param fileName  »èÁ¦ ´ë»ó ÆÄÀÏ¸í
+	 * @param file      ì‚­ì œ ëŒ€ìƒ ë””ë ‰í† ë¦¬ ì •ë³´ë¡œ ìƒì„±ëœ File
+	 * @param fileName  ì‚­ì œ ëŒ€ìƒ íŒŒì¼ëª…
 	 */
 	public static void deleteChild(File file, String fileName) throws Exception {
 		File childFile = null;
 		try {
-			/* °Ë»ö ´ë»ó ÆÄÀÏÀÌ Á¸ÀçÇÏ´Â µğ·ºÅä¸® ÀÏ °æ¿ì ½ÇÇà  */
+			/* ê²€ìƒ‰ ëŒ€ìƒ íŒŒì¼ì´ ì¡´ì¬í•˜ëŠ” ë””ë ‰í† ë¦¬ ì¼ ê²½ìš° ì‹¤í–‰  */
 			if (file.exists() && file.isDirectory()) {
 
-				/* ´ë»ó µğ·ºÅä¸® ³»ºÎ ÆÄÀÏÀÇ ¸®½ºÆ®¸¦ ÃßÃâ  */
+				/* ëŒ€ìƒ ë””ë ‰í† ë¦¬ ë‚´ë¶€ íŒŒì¼ì˜ ë¦¬ìŠ¤íŠ¸ë¥¼ ì¶”ì¶œ  */
 				String[] fileList = file.list();
 
 				if (fileList.length != 0) {
@@ -279,7 +279,7 @@ public class FileUtil {
 
 						childFile = checkNull(file.getAbsolutePath(), fileList[index]);
 
-						/* ¸®½ºÆ®ÀÇ ÆÄÀÏÀ» »èÁ¦ */
+						/* ë¦¬ìŠ¤íŠ¸ì˜ íŒŒì¼ì„ ì‚­ì œ */
 						if (childFile.isDirectory())
 							deleteChild(childFile, fileList[index]);
 						else if (childFile.isFile())
@@ -287,30 +287,30 @@ public class FileUtil {
 					}
 				}
 
-				/* ¸®½ºÆ® ÆÄÀÏÀ» ÀüºÎ »èÁ¦ÇÑ ºó µğ·ºÅä¸® »èÁ¦ */
+				/* ë¦¬ìŠ¤íŠ¸ íŒŒì¼ì„ ì „ë¶€ ì‚­ì œí•œ ë¹ˆ ë””ë ‰í† ë¦¬ ì‚­ì œ */
 				file.delete();
 			}
 		}
 		catch (Exception ex) {
-			System.out.println("FileUtil : deleteChild()Áß ¿¡·¯ ¹ß»ı");
+			System.out.println("FileUtil : deleteChild()ì¤‘ ì—ëŸ¬ ë°œìƒ");
 		}
 	}
 
 
 	/**
-	 * ´Ü°Ç¿¡ ´ëÇÑ ¾÷·Îµå ´ë»ó ÆÄÀÏ°ú ¾÷·Îµå Å¸°Ù µğ·ºÅä¸®¸¦ ÀÔ·Â¹Ş¾Æ ¾÷·Îµå¸¦ Ã³¸®ÇÏ´Â ¸Ş¼Òµå
-	 * Á¦¾à»çÇ× : ·ÎÄÃ¸¸ °¡´É
-	 * @param filePath      ¾÷·Îµå ´ë»ó ÆÄÀÏ Á¤º¸
-	 * @param uploadPath    ¾÷·Îµå Å¸°Ù À§Ä¡ Á¤º¸
-	 * @return String       ¾÷·ÎµåÇÑ ÆÄÀÏÀÇ ÀÌ¸§
+	 * ë‹¨ê±´ì— ëŒ€í•œ ì—…ë¡œë“œ ëŒ€ìƒ íŒŒì¼ê³¼ ì—…ë¡œë“œ íƒ€ê²Ÿ ë””ë ‰í† ë¦¬ë¥¼ ì…ë ¥ë°›ì•„ ì—…ë¡œë“œë¥¼ ì²˜ë¦¬í•˜ëŠ” ë©”ì†Œë“œ
+	 * ì œì•½ì‚¬í•­ : ë¡œì»¬ë§Œ ê°€ëŠ¥
+	 * @param filePath      ì—…ë¡œë“œ ëŒ€ìƒ íŒŒì¼ ì •ë³´
+	 * @param uploadPath    ì—…ë¡œë“œ íƒ€ê²Ÿ ìœ„ì¹˜ ì •ë³´
+	 * @return String       ì—…ë¡œë“œí•œ íŒŒì¼ì˜ ì´ë¦„
 	 */
 	public String fileUpload(String filePath, String uploadPath) throws Exception {
 		String uploadFileName = "";
-		/* ÀÔ·Â¹ŞÀº ÆÄÀÏ¸í°ú °æ·Î¿¡ ÇÑ±ÛÀÌ ÀÖÀ» °æ¿ì¸¦ ´ëºñÇØ ÀÎÄÚµù */
+		/* ì…ë ¥ë°›ì€ íŒŒì¼ëª…ê³¼ ê²½ë¡œì— í•œê¸€ì´ ìˆì„ ê²½ìš°ë¥¼ ëŒ€ë¹„í•´ ì¸ì½”ë”© */
 		String saveFile = filePath;
 		String saveDirectory = uploadPath;
 
-		/* ÀÔ·Â¹ŞÀº ÆÄÀÏ¸íÀº µğ·ºÅä¸® °æ·Î±îÁö Æ÷ÇÔÇÏ°í ÀÖÀ¸¹Ç·Î ¿ø·¡ÀÇ ÆÄÀÏ¸í¸¸ ÃßÃâ */
+		/* ì…ë ¥ë°›ì€ íŒŒì¼ëª…ì€ ë””ë ‰í† ë¦¬ ê²½ë¡œê¹Œì§€ í¬í•¨í•˜ê³  ìˆìœ¼ë¯€ë¡œ ì›ë˜ì˜ íŒŒì¼ëª…ë§Œ ì¶”ì¶œ */
 		String fileSep = System.getProperty("file.separator");
 		int intStart = saveFile.lastIndexOf(fileSep);
 		String fileName = saveFile.substring(intStart + 1, saveFile.length());
@@ -319,16 +319,16 @@ public class FileUtil {
 		FileInputStream fis = null;
 		FileOutputStream fos = null;
 		try {
-			/* ¾÷·Îµå ´ë»ó ÆÄÀÏ°ú ¾÷·Îµå Å¸°Ù À§Ä¡¿¡ ´ëÇÑ File »ı¼º */
+			/* ì—…ë¡œë“œ ëŒ€ìƒ íŒŒì¼ê³¼ ì—…ë¡œë“œ íƒ€ê²Ÿ ìœ„ì¹˜ì— ëŒ€í•œ File ìƒì„± */
 			in = new File(saveFile);
 			out = new File(saveDirectory, fileName);
 
-			/* °°Àº ÆÄÀÏÀÌ Á¸ÀçÇÏ¸é ´Ù¸¥ ÀÌ¸§À¸·Î ÆÄÀÏ »ı¼º*/
+			/* ê°™ì€ íŒŒì¼ì´ ì¡´ì¬í•˜ë©´ ë‹¤ë¥¸ ì´ë¦„ìœ¼ë¡œ íŒŒì¼ ìƒì„±*/
 			if(out.exists()){
 
 			}
 
-			/* ½ºÆ®¸²À» ÅëÇØ ¾÷·Îµå ´ë»ó ÆÄÀÏÀ» ¾÷·Îµå Å¸°Ù À§Ä¡¿¡ º¹»ç */
+			/* ìŠ¤íŠ¸ë¦¼ì„ í†µí•´ ì—…ë¡œë“œ ëŒ€ìƒ íŒŒì¼ì„ ì—…ë¡œë“œ íƒ€ê²Ÿ ìœ„ì¹˜ì— ë³µì‚¬ */
 			fis = new FileInputStream(in);
 			fos = new FileOutputStream(out);
 
@@ -360,23 +360,23 @@ public class FileUtil {
 	}
 
 	/**
-	 * ´Ü°Ç¿¡ ´ëÇÑ ¾÷·Îµå ´ë»ó ÆÄÀÏ°ú ¾÷·Îµå Å¸°Ù µğ·ºÅä¸®¸¦ ÀÔ·Â¹Ş¾Æ ¾÷·Îµå¸¦ Ã³¸®ÇÏ´Â ¸Ş¼Òµå
-	 * ¾÷·Îµå½Ã ÆÄÀÏÀÌ¸§À» »õ·Î Á¤ÀÇµÈ ÆÄÀÏ ¸íÀ¸·Î º¯°æÇÏ¿© ¾÷·Îµå
-	 * Á¦¾à»çÇ× : ·ÎÄÃ¸¸ °¡´É
-	 * @param filePath      ¾÷·Îµå ´ë»ó ÆÄÀÏ Á¤º¸
-	 * @param uploadPath    ¾÷·Îµå Å¸°Ù À§Ä¡ Á¤º¸
-	 * @param newFileName   ¾÷·Îµå½Ã »ı¼ºµÉ ÆÄÀÏÀÇ ÀÌ¸§
+	 * ë‹¨ê±´ì— ëŒ€í•œ ì—…ë¡œë“œ ëŒ€ìƒ íŒŒì¼ê³¼ ì—…ë¡œë“œ íƒ€ê²Ÿ ë””ë ‰í† ë¦¬ë¥¼ ì…ë ¥ë°›ì•„ ì—…ë¡œë“œë¥¼ ì²˜ë¦¬í•˜ëŠ” ë©”ì†Œë“œ
+	 * ì—…ë¡œë“œì‹œ íŒŒì¼ì´ë¦„ì„ ìƒˆë¡œ ì •ì˜ëœ íŒŒì¼ ëª…ìœ¼ë¡œ ë³€ê²½í•˜ì—¬ ì—…ë¡œë“œ
+	 * ì œì•½ì‚¬í•­ : ë¡œì»¬ë§Œ ê°€ëŠ¥
+	 * @param filePath      ì—…ë¡œë“œ ëŒ€ìƒ íŒŒì¼ ì •ë³´
+	 * @param uploadPath    ì—…ë¡œë“œ íƒ€ê²Ÿ ìœ„ì¹˜ ì •ë³´
+	 * @param newFileName   ì—…ë¡œë“œì‹œ ìƒì„±ë  íŒŒì¼ì˜ ì´ë¦„
 	 */
 	public void fileUpload(String filePath, String uploadPath , String newFileName) throws Exception {
 		String saveFile = filePath;
 		String saveDirectory = uploadPath;
 
 		try {
-			/* ¾÷·Îµå ´ë»ó ÆÄÀÏ°ú ¾÷·Îµå Å¸°Ù À§Ä¡¿¡ ´ëÇÑ File »ı¼º */
+			/* ì—…ë¡œë“œ ëŒ€ìƒ íŒŒì¼ê³¼ ì—…ë¡œë“œ íƒ€ê²Ÿ ìœ„ì¹˜ì— ëŒ€í•œ File ìƒì„± */
 			File in = new File(saveFile);
 			File out = new File(saveDirectory, newFileName);
 
-			/* ½ºÆ®¸²À» ÅëÇØ ¾÷·Îµå ´ë»ó ÆÄÀÏÀ» ¾÷·Îµå Å¸°Ù À§Ä¡¿¡ º¹»ç */
+			/* ìŠ¤íŠ¸ë¦¼ì„ í†µí•´ ì—…ë¡œë“œ ëŒ€ìƒ íŒŒì¼ì„ ì—…ë¡œë“œ íƒ€ê²Ÿ ìœ„ì¹˜ì— ë³µì‚¬ */
 			FileInputStream fis = new FileInputStream(in);
 			FileOutputStream fos = new FileOutputStream(out);
 
@@ -396,7 +396,7 @@ public class FileUtil {
 
 
 	/**
-	 * ÆÄÀÏ»çÀÌÁî
+	 * íŒŒì¼ì‚¬ì´ì¦ˆ
 	 * @param file
 	 * @return int
 	 * @throws MainException
@@ -419,13 +419,13 @@ public class FileUtil {
 	}
 	
     /**
-	    * ÁÖ¾îÁø ÆÄÀÏÀÇ fullpathÁß pathºÎºĞÀ» Á¦¿ÜÇÑ filname part¸¸ ºĞ¸®ÇÏ¿© ¸®ÅÏÇÑ´Ù.<BR>
-	    * (new File(fullpath)).getName()°ú µ¿ÀÏÇÏ³ª File °´Ã¼¸¦ »ç¿ëÇÏÁö ¾Ê°í ¹®ÀÚ¿­ ÆĞÅÏ¸¸À¸·Î ºĞ¼®ÇÑ´Ù.<BR>
-	    * ¸¸¾à fullpath¿¡ / È¤Àº \°¡ Á¸ÀçÇÏÁö ¾Ê´Â °æ¿ì¶ó¸é "./" À» ¸®ÅÏÇÒ °ÍÀÌ´Ù.
+	    * ì£¼ì–´ì§„ íŒŒì¼ì˜ fullpathì¤‘ pathë¶€ë¶„ì„ ì œì™¸í•œ filname partë§Œ ë¶„ë¦¬í•˜ì—¬ ë¦¬í„´í•œë‹¤.<BR>
+	    * (new File(fullpath)).getName()ê³¼ ë™ì¼í•˜ë‚˜ File ê°ì²´ë¥¼ ì‚¬ìš©í•˜ì§€ ì•Šê³  ë¬¸ìì—´ íŒ¨í„´ë§Œìœ¼ë¡œ ë¶„ì„í•œë‹¤.<BR>
+	    * ë§Œì•½ fullpathì— / í˜¹ì€ \ê°€ ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ê²½ìš°ë¼ë©´ "./" ì„ ë¦¬í„´í•  ê²ƒì´ë‹¤.
 	    *
-	    * @param fullpath Path¿Í filenameÀ¸·Î ÀÌ·ç¾îÁø ÆÄÀÏÀÇ fullpath
+	    * @param fullpath Pathì™€ filenameìœ¼ë¡œ ì´ë£¨ì–´ì§„ íŒŒì¼ì˜ fullpath
 	    *
-	    * @return fullpathÁß filename part
+	    * @return fullpathì¤‘ filename part
 	    */
 	    public static String getFileNameChop(String fullpath) {
 	        if (null == fullpath)
@@ -438,12 +438,12 @@ public class FileUtil {
 	    }
 
 	    /**
-	     * µµ½º ÆÄÀÏ½Ã½ºÅÛÀÇ seperator(\)¸¦ Java Style (/)·Î º¯°æÇÏ±â À§ÇØ »ç¿ëµÇ´Â Á¤±Ô½Ä ÆĞÅÏ
+	     * ë„ìŠ¤ íŒŒì¼ì‹œìŠ¤í…œì˜ seperator(\)ë¥¼ Java Style (/)ë¡œ ë³€ê²½í•˜ê¸° ìœ„í•´ ì‚¬ìš©ë˜ëŠ” ì •ê·œì‹ íŒ¨í„´
 	     */
 	    public static final Pattern dosSeperator = Pattern.compile("\\\\");
 
 	    /**
-	     * ÆÄÀÏ ½Ã½ºÅÛÀÇ Full Path¿¡¼­ ¸¶Áö¸·ÀÌ /·Î ³¡³ª´ÂÁö¸¦ °Ë»çÇÏ±â À§ÇØ »ç¿ëµÇ´Â Á¤±Ô½Ä ÆĞÅÏ
+	     * íŒŒì¼ ì‹œìŠ¤í…œì˜ Full Pathì—ì„œ ë§ˆì§€ë§‰ì´ /ë¡œ ëë‚˜ëŠ”ì§€ë¥¼ ê²€ì‚¬í•˜ê¸° ìœ„í•´ ì‚¬ìš©ë˜ëŠ” ì •ê·œì‹ íŒ¨í„´
 	     */
 	    public static final Pattern lastSeperator = Pattern.compile("/$");
 

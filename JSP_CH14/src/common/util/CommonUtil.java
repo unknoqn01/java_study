@@ -12,17 +12,17 @@ import java.util.Vector;
 /**
  * <b>class : </b> CommonUtil
  * <b>Class Description</b><br>
- * °øÅë Util Class
+ * ê³µí†µ Util Class
  * <b>History</b><br>
 
 */
 public class CommonUtil {
 	
 	/**
-	 * °´Ã¼µéÀ» º¹»çÇØÁÖ´Â ¸Ş¼Òµå
+	 * ê°ì²´ë“¤ì„ ë³µì‚¬í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
-	 * @param objects       º¹»ç ´ë»ó °´Ã¼°¡ ´ã°ÜÀÖ´Â ¹è¿­
-	 * @return Object[]     º¹»çµÈ °´Ã¼µéÀÌ ´ã°ÜÁø ¹è¿­
+	 * @param objects       ë³µì‚¬ ëŒ€ìƒ ê°ì²´ê°€ ë‹´ê²¨ìˆëŠ” ë°°ì—´
+	 * @return Object[]     ë³µì‚¬ëœ ê°ì²´ë“¤ì´ ë‹´ê²¨ì§„ ë°°ì—´
 	 */
 	public static Object[] clone(Object[] objects) {
 		int length = objects.length;
@@ -35,10 +35,10 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * °´Ã¼¸¦ º¹»çÇØÁÖ´Â ¸Ş¼Òµå
+	 * ê°ì²´ë¥¼ ë³µì‚¬í•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
-	 * @param object      º¹»ç ´ë»ó °´Ã¼
-	 * @return Object     º¹»çµÈ °´Ã¼
+	 * @param object      ë³µì‚¬ ëŒ€ìƒ ê°ì²´
+	 * @return Object     ë³µì‚¬ëœ ê°ì²´
 	 */
 	public static Object clone(Object object) {
 		Class c = object.getClass();
@@ -62,9 +62,9 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * Vector¿¡ ´ã±ä °´Ã¼µéÀ» º¹»çÇØÁÖ´Â ¸Ş¼Òµå
-	 * @param objects   º¹»ç ´ë»ó °´Ã¼°¡ ´ã°ÜÀÖ´Â Vector
-	 * @return Vector   º¹»çµÈ °´Ã¼µéÀÌ ´ã°ÜÁø Vector
+	 * Vectorì— ë‹´ê¸´ ê°ì²´ë“¤ì„ ë³µì‚¬í•´ì£¼ëŠ” ë©”ì†Œë“œ
+	 * @param objects   ë³µì‚¬ ëŒ€ìƒ ê°ì²´ê°€ ë‹´ê²¨ìˆëŠ” Vector
+	 * @return Vector   ë³µì‚¬ëœ ê°ì²´ë“¤ì´ ë‹´ê²¨ì§„ Vector
 	 */
 	public static Vector clone(Vector objects) {
 		Vector newObjects = new Vector();
@@ -77,12 +77,12 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * obj1¿Í obj2¸¦ attr°ú ºñ±³ÇØ¼­ ±× °á°ú°ªÀ» int·Î ¸®ÅÏÇÏ´Â ¸Ş¼Òµå
+	 * obj1ì™€ obj2ë¥¼ attrê³¼ ë¹„êµí•´ì„œ ê·¸ ê²°ê³¼ê°’ì„ intë¡œ ë¦¬í„´í•˜ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param obj1      Object
 	 * @param obj2      Object
-	 * @param attr      ºñ±³´ë»ó attr
-	 * @return int      ºñ±³ °á°ú °ª
+	 * @param attr      ë¹„êµëŒ€ìƒ attr
+	 * @return int      ë¹„êµ ê²°ê³¼ ê°’
 	 */
 	private static int compareTo(Object obj1, Object obj2, String attr) {
 		int ret = 0;
@@ -132,10 +132,10 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * strÀ» ÀÔ·Â¹Ş¾Æ byte·Î Ä¡È¯ÇØÁÖ´Â ¸Ş¼Òµå
-	 * @param str       Ä¡È¯ ´ë»ó ¹®ÀÚ¿­
-	 * @param len       ±æÀÌ
-	 * @return byte     ¹ÙÀÌÆ® °ªÀ¸·Î Ä¡È¯µÈ ¹®ÀÚ ¹è¿­
+	 * strì„ ì…ë ¥ë°›ì•„ byteë¡œ ì¹˜í™˜í•´ì£¼ëŠ” ë©”ì†Œë“œ
+	 * @param str       ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìì—´
+	 * @param len       ê¸¸ì´
+	 * @return byte     ë°”ì´íŠ¸ ê°’ìœ¼ë¡œ ì¹˜í™˜ëœ ë¬¸ì ë°°ì—´
 	 */
 	public static byte[] fixByteLength(String str, int len) {
 		byte[] b = new byte[len];
@@ -146,21 +146,21 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * ÀÔ·Â¹ŞÀº strÀ» off¿¡¼­ len¸¸Å­ Àß¶ó¼­ ±× °ªÀ» ¸®ÅÏÇØÁÖ´Â ¸Ş¼Òµå
-	 * @param str       Ä¡È¯ ´ë»ó ¹®ÀÚ¿­
-	 * @param len       ¹®ÀÚ¿­À» ÀÚ¸¦ ±æÀÌ °ª
-	 * @return String   Ä¡È¯´ë»ó ¹®ÀÚ¿­ÀÇ len¸¸Å­ÀÇ ¹®ÀÚ¿­
+	 * ì…ë ¥ë°›ì€ strì„ offì—ì„œ lenë§Œí¼ ì˜ë¼ì„œ ê·¸ ê°’ì„ ë¦¬í„´í•´ì£¼ëŠ” ë©”ì†Œë“œ
+	 * @param str       ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìì—´
+	 * @param len       ë¬¸ìì—´ì„ ìë¥¼ ê¸¸ì´ ê°’
+	 * @return String   ì¹˜í™˜ëŒ€ìƒ ë¬¸ìì—´ì˜ lenë§Œí¼ì˜ ë¬¸ìì—´
 	 */
 	public static String fixLength(String str, int len) {
 		return fixLength(str, 0, len);
 	}
 	
 	/**
-	 * ÀÔ·Â¹ŞÀº strÀ» off¿¡¼­ len¸¸Å­ Àß¶ó¼­ ±× °ªÀ» ¸®ÅÏÇØÁÖ´Â ¸Ş¼Òµå
-	 * @param str       Ä¡È¯ ´ë»ó ¹®ÀÚ¿­
-	 * @param off       ½ÃÀÛ ¹®ÀÚ¿­ÀÇ ÀÚ¸®°ª
-	 * @param len       ½ÃÀÛ ¹®ÀÚ¿­¿¡¼­ ÀÚ¸¦ ±æÀÌ °ª
-	 * @return String   Ä¡È¯´ë»ó ¹®ÀÚ¿­ÀÇ off¿¡¼­ len¸¸Å­ÀÇ ¹®ÀÚ¿­
+	 * ì…ë ¥ë°›ì€ strì„ offì—ì„œ lenë§Œí¼ ì˜ë¼ì„œ ê·¸ ê°’ì„ ë¦¬í„´í•´ì£¼ëŠ” ë©”ì†Œë“œ
+	 * @param str       ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìì—´
+	 * @param off       ì‹œì‘ ë¬¸ìì—´ì˜ ìë¦¬ê°’
+	 * @param len       ì‹œì‘ ë¬¸ìì—´ì—ì„œ ìë¥¼ ê¸¸ì´ ê°’
+	 * @return String   ì¹˜í™˜ëŒ€ìƒ ë¬¸ìì—´ì˜ offì—ì„œ lenë§Œí¼ì˜ ë¬¸ìì—´
 	 */
 	public static String fixLength(String str, int off, int len) {
 		int str_len = str.length();
@@ -191,11 +191,11 @@ public class CommonUtil {
 	
 	/**
 	 *
-	 * ÀÔ·ÂÇÑ °ªÀÌ null ¶Ç´Â null String ÀÏ °æ¿ì true¸¦ return ÇÑ´Ù.
+	 * ì…ë ¥í•œ ê°’ì´ null ë˜ëŠ” null String ì¼ ê²½ìš° trueë¥¼ return í•œë‹¤.
 	 *
 	 * <pre>
 	 *
-	 * [»ç¿ë ¿¹Á¦]
+	 * [ì‚¬ìš© ì˜ˆì œ]
 	 *
 	 * ValidationUtil.isEmpty("")		===> true
 	 * ValidationUtil.isEmpty(null)	===> true
@@ -216,11 +216,11 @@ public class CommonUtil {
 	
 	/**
 	 *
-	 * ÀÔ·ÂÇÑ ArrayÀÇ °ªÀÌ ÀÔ·ÂÇÑ Key ¿Í Ã¹¹øÂ°·Î °°Àº index¸¦ return ÇÑ´Ù.
+	 * ì…ë ¥í•œ Arrayì˜ ê°’ì´ ì…ë ¥í•œ Key ì™€ ì²«ë²ˆì§¸ë¡œ ê°™ì€ indexë¥¼ return í•œë‹¤.
 	 *
 	 * <pre>
 	 *
-	 * [»ç¿ë ¿¹Á¦]
+	 * [ì‚¬ìš© ì˜ˆì œ]
 	 *
 	 *	String [] a = new String[3];
 	 *	a[0] = new String("ccc");
@@ -253,7 +253,7 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * Object¸¦ null·Î fixÇØÁÖ´Â ¹®ÀÚ¿­
+	 * Objectë¥¼ nullë¡œ fixí•´ì£¼ëŠ” ë¬¸ìì—´
 	 *
 	 * @param o     Object
 	 */
@@ -285,7 +285,7 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * ¸ğµç °ø¹éÀ» Null
+	 * ëª¨ë“  ê³µë°±ì„ Null
 	 * @param o
 	 */
 	public static void fixNullAll(Object o) {
@@ -332,7 +332,7 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * Object¸¦ ÀÔ·Â¹Ş¾Æ ¹®ÀÚ¿­ ¾ÕµÚÀÇ °ø¹éÀ» Á¦°ÅÇÏ°í Null·Î fixÇØÁÖ´Â ¸Ş¼Òµå
+	 * Objectë¥¼ ì…ë ¥ë°›ì•„ ë¬¸ìì—´ ì•ë’¤ì˜ ê³µë°±ì„ ì œê±°í•˜ê³  Nullë¡œ fixí•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param o     Object
 	 */
@@ -365,7 +365,7 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * Object¸¦ ÀÔ·Â¹Ş¾Æ ¸ğµç¹®ÀÚ¿­À» Á¦°ÅÇÏ°í Null·Î fixÇØÁÖ´Â ¸Ş¼Òµå
+	 * Objectë¥¼ ì…ë ¥ë°›ì•„ ëª¨ë“ ë¬¸ìì—´ì„ ì œê±°í•˜ê³  Nullë¡œ fixí•´ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param o Object
 	 */
@@ -415,10 +415,10 @@ public class CommonUtil {
 	
 	
 	/**
-	 * HashMapÀ» ÀÔ·Â¹Ş¾Æ HashMapÀÇ Key°ªµéÀ» ÃßÃâÇØ³»´Â ¸Ş¼Òµå
+	 * HashMapì„ ì…ë ¥ë°›ì•„ HashMapì˜ Keyê°’ë“¤ì„ ì¶”ì¶œí•´ë‚´ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param map       HashMap
-	 * @return String   HashMapÀÇ Key°ªµéÀ» ´ãÀº ¹è¿­
+	 * @return String   HashMapì˜ Keyê°’ë“¤ì„ ë‹´ì€ ë°°ì—´
 	 */
 	public static String[] getHashMapKeys(HashMap map) {
 		if (map == null)
@@ -433,9 +433,9 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * ¹®ÀÚ¿­À» ÀÔ·Â¹Ş¾Æ ¹®ÀÚ¿­¿¡ Æ÷ÇÔµÈ ¼ıÀÚ¸¸ ÃßÃâÇØ¼­ ¹İÈ¯ÇÏ´Â ¸Ş¼Òµå
-	 * @param str       °Ë»ö´ë»ó ¹®ÀÚ¿­
-	 * @return String   ÃßÃâÇÑ ¼ıÀÚ¸¸ ´ã°í ÀÖ´Â ¹®ÀÚ¿­
+	 * ë¬¸ìì—´ì„ ì…ë ¥ë°›ì•„ ë¬¸ìì—´ì— í¬í•¨ëœ ìˆ«ìë§Œ ì¶”ì¶œí•´ì„œ ë°˜í™˜í•˜ëŠ” ë©”ì†Œë“œ
+	 * @param str       ê²€ìƒ‰ëŒ€ìƒ ë¬¸ìì—´
+	 * @return String   ì¶”ì¶œí•œ ìˆ«ìë§Œ ë‹´ê³  ìˆëŠ” ë¬¸ìì—´
 	 */
 	public static String getRawDigit(String str) {
 		char[] c = str.toCharArray();
@@ -449,9 +449,9 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * Set¿¡ ´ã±ä °ªµéÀ» ObjectÀÇ ¹è¿­ ÇüÅÂ·Î ¸®ÅÏÇÏ´Â ¸Ş¼Òµå
+	 * Setì— ë‹´ê¸´ ê°’ë“¤ì„ Objectì˜ ë°°ì—´ í˜•íƒœë¡œ ë¦¬í„´í•˜ëŠ” ë©”ì†Œë“œ
 	 * @param set           Set
-	 * @return Object       Set¿¡ ´ã±ä °ªµéÀ» ´ãÀº ¸Ş¼Òµå
+	 * @return Object       Setì— ë‹´ê¸´ ê°’ë“¤ì„ ë‹´ì€ ë©”ì†Œë“œ
 	 */
 	public static Object[] getSetValues(Set set) {
 		if (set == null)
@@ -466,10 +466,10 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * ThrowableÀ» ÀÔ·Â¹Ş¾Æ StackÇü½ÄÀ¸·Î ´ã±ä ÀÚÃë¸¦ ´ãÀº ¹®ÀÚ¿­À» ¹İÈ¯ÇÏ´Â ¸Ş¼Òµå
+	 * Throwableì„ ì…ë ¥ë°›ì•„ Stackí˜•ì‹ìœ¼ë¡œ ë‹´ê¸´ ìì·¨ë¥¼ ë‹´ì€ ë¬¸ìì—´ì„ ë°˜í™˜í•˜ëŠ” ë©”ì†Œë“œ
 	 *
 	 * @param e             Throwable
-	 * @return String       ThrowableÀÇ °ªÀ» ´ãÀº ¹®ÀÚ¿­
+	 * @return String       Throwableì˜ ê°’ì„ ë‹´ì€ ë¬¸ìì—´
 	 */
 	public static String getStackTrace(Throwable e) {
 		java.io.ByteArrayOutputStream bos = new java.io.ByteArrayOutputStream();
@@ -480,9 +480,9 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏ ÀÌ¸§À» ¹Ş¾Æ¼­ ½Ã½ºÅÛÀÇ ºĞ¸®±âÈ£·Î Ä¡È¯µÈ ÆÄÀÏ ÀÌ¸§À» ¸®ÅÏÇØÁÖ´Â ¸Ş¼¼Áö
-	 * @param fileName      Ä¡È¯´ë»ó ÆÄÀÏÀÌ¸§
-	 * @return String       ½Ã½ºÅÛÀÇ ºĞ¸®±âÈ£·Î Ä¡È¯µÈ ÆÄÀÏÀÌ¸§
+	 * íŒŒì¼ ì´ë¦„ì„ ë°›ì•„ì„œ ì‹œìŠ¤í…œì˜ ë¶„ë¦¬ê¸°í˜¸ë¡œ ì¹˜í™˜ëœ íŒŒì¼ ì´ë¦„ì„ ë¦¬í„´í•´ì£¼ëŠ” ë©”ì„¸ì§€
+	 * @param fileName      ì¹˜í™˜ëŒ€ìƒ íŒŒì¼ì´ë¦„
+	 * @return String       ì‹œìŠ¤í…œì˜ ë¶„ë¦¬ê¸°í˜¸ë¡œ ì¹˜í™˜ëœ íŒŒì¼ì´ë¦„
 	 */
 	public static String getSystemFileName(String fileName) {
 		String separator = System.getProperty("file.separator");
@@ -492,7 +492,7 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * Á¤·Ä ¸Ş¼Òµå
+	 * ì •ë ¬ ë©”ì†Œë“œ
 	 *
 	 * @param objs
 	 * @param compareAttr
@@ -503,7 +503,7 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * Á¤·Ä ¸Ş¼Òµå
+	 * ì •ë ¬ ë©”ì†Œë“œ
 	 *
 	 * @param obj
 	 * @param compareAttr
@@ -533,13 +533,13 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * ÇØ´ç ¹®ÀÚ¿­(str)ÀÇ offºÎÅÍ lengÀÇ »çÀÌÀÇ ¹®ÀÚ¸¦ replace·Î º¯È­ÇØ ÁÖ´Â ¸Ş¼Òµå
+	 * í•´ë‹¹ ë¬¸ìì—´(str)ì˜ offë¶€í„° lengì˜ ì‚¬ì´ì˜ ë¬¸ìë¥¼ replaceë¡œ ë³€í™”í•´ ì£¼ëŠ” ë©”ì†Œë“œ
 	 *
-	 * @param str           Ä¡È¯ ´ë»ó ¹®ÀÚ¿­
-	 * @param off           Ä¡È¯ ´ë»ó ½ÃÀÛÁ¡
-	 * @param len           Ä¡È¯ ´ë»ó ³¡Á¡
-	 * @param replace       Ä¡È¯µÉ ¹®ÀÚ
-	 * @return String       Ä¡È¯´ë»ó ¹®ÀÚ¿­À» Ä¡È¯µÉ ¹®ÀÚ¿­·Î ¹Ù²Û ¹®ÀÚ¿­
+	 * @param str           ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìì—´
+	 * @param off           ì¹˜í™˜ ëŒ€ìƒ ì‹œì‘ì 
+	 * @param len           ì¹˜í™˜ ëŒ€ìƒ ëì 
+	 * @param replace       ì¹˜í™˜ë  ë¬¸ì
+	 * @return String       ì¹˜í™˜ëŒ€ìƒ ë¬¸ìì—´ì„ ì¹˜í™˜ë  ë¬¸ìì—´ë¡œ ë°”ê¾¼ ë¬¸ìì—´
 	 */
 	public static String replace(String str, int off, int len, String replace) {
 		StringBuffer buff = new StringBuffer(str);
@@ -548,13 +548,13 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * ÇØ´ç ¹®ÀÚ¿­(str1)ÀÇ Æ¯Á¤ ¹®ÀÚ¿­(str2)¸¦ off¿Í str2»çÀÌ¿¡¼­ Ã£¾Æ¼­ ¿øÇÏ´Â ¹®ÀÚ¿­(replace)·Î ¹Ù²Ù±â
+	 * í•´ë‹¹ ë¬¸ìì—´(str1)ì˜ íŠ¹ì • ë¬¸ìì—´(str2)ë¥¼ offì™€ str2ì‚¬ì´ì—ì„œ ì°¾ì•„ì„œ ì›í•˜ëŠ” ë¬¸ìì—´(replace)ë¡œ ë°”ê¾¸ê¸°
 	 *
-	 * @param str1          Ä¡È¯ ´ë»ó ¹®ÀÚ¿­
-	 * @param off           Ä¡È¯ ´ë»ó ¹®ÀÚ¸¦ Ã£À» ½ÃÀÛÁ¡
-	 * @param str2          Ä¡È¯ ´ë»ó ¹®ÀÚ
-	 * @param replace       Ä¡È¯µÉ ¹®ÀÚ
-	 * @return String       Ä¡È¯ ´ë»ó ¹®ÀÚ¿­À» Ä¡È¯µÉ ¹®ÀÚ¿­·Î ¹Ù²Û ¹®ÀÚ¿­
+	 * @param str1          ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìì—´
+	 * @param off           ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìë¥¼ ì°¾ì„ ì‹œì‘ì 
+	 * @param str2          ì¹˜í™˜ ëŒ€ìƒ ë¬¸ì
+	 * @param replace       ì¹˜í™˜ë  ë¬¸ì
+	 * @return String       ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìì—´ì„ ì¹˜í™˜ë  ë¬¸ìì—´ë¡œ ë°”ê¾¼ ë¬¸ìì—´
 	 */
 	public static String replace(String str1, int off, String str2,
 			String replace) {
@@ -568,25 +568,25 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * ÇØ´ç ¹®ÀÚ¿­(str1)ÀÇ Æ¯Á¤ ¹®ÀÚ¿­(str2)¸¦ ¹®ÀÚ¿­(replace)·Î ¹Ù²Ù±â
+	 * í•´ë‹¹ ë¬¸ìì—´(str1)ì˜ íŠ¹ì • ë¬¸ìì—´(str2)ë¥¼ ë¬¸ìì—´(replace)ë¡œ ë°”ê¾¸ê¸°
 	 *
-	 * @param str1          Ä¡È¯ ´ë»ó ¹®ÀÚ¿­
-	 * @param str2          Ä¡È¯ ´ë»ó ¹®ÀÚ
-	 * @param replace       Ä¡È¯µÉ ¹®ÀÚ
-	 * @return String       Ä¡È¯ ´ë»ó ¹®ÀÚ¿­À» Ä¡È¯µÉ ¹®ÀÚ¿­·Î ¹Ù²Û ¹®ÀÚ¿­
+	 * @param str1          ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìì—´
+	 * @param str2          ì¹˜í™˜ ëŒ€ìƒ ë¬¸ì
+	 * @param replace       ì¹˜í™˜ë  ë¬¸ì
+	 * @return String       ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìì—´ì„ ì¹˜í™˜ë  ë¬¸ìì—´ë¡œ ë°”ê¾¼ ë¬¸ìì—´
 	 */
 	public static String replace(String str1, String str2, String replace) {
 		return replace(str1, 0, str2, replace);
 	}
 	
 	/**
-	 * ÇØ´ç ¹®ÀÚ¿­(str1)ÀÇ Æ¯Á¤ ¹®ÀÚ¿­(str2)¸¦ off¿Í str2»çÀÌ¿¡¼­ Ã£¾Æ¼­ ¿øÇÏ´Â ¹®ÀÚ¿­(replace)·Î ¸ğµÎ ¹Ù²Ù±â
+	 * í•´ë‹¹ ë¬¸ìì—´(str1)ì˜ íŠ¹ì • ë¬¸ìì—´(str2)ë¥¼ offì™€ str2ì‚¬ì´ì—ì„œ ì°¾ì•„ì„œ ì›í•˜ëŠ” ë¬¸ìì—´(replace)ë¡œ ëª¨ë‘ ë°”ê¾¸ê¸°
 	 *
-	 * @param str1          Ä¡È¯ ´ë»ó ¹®ÀÚ¿­
-	 * @param off           Ä¡È¯ ´ë»ó ¹®ÀÚ¸¦ Ã£À» ½ÃÀÛÁ¡
-	 * @param str2          Ä¡È¯ ´ë»ó ¹®ÀÚ
-	 * @param replace       Ä¡È¯µÉ ¹®ÀÚ
-	 * @return String       Ä¡È¯ ´ë»ó ¹®ÀÚ¿­À» Ä¡È¯µÉ ¹®ÀÚ¿­·Î ¹Ù²Û ¹®ÀÚ¿­
+	 * @param str1          ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìì—´
+	 * @param off           ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìë¥¼ ì°¾ì„ ì‹œì‘ì 
+	 * @param str2          ì¹˜í™˜ ëŒ€ìƒ ë¬¸ì
+	 * @param replace       ì¹˜í™˜ë  ë¬¸ì
+	 * @return String       ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìì—´ì„ ì¹˜í™˜ë  ë¬¸ìì—´ë¡œ ë°”ê¾¼ ë¬¸ìì—´
 	 */
 	public static String replaceAll(String str1, int off, String str2,
 			String replace) {
@@ -607,22 +607,22 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * ÇØ´ç ¹®ÀÚ¿­(str1)ÀÇ Æ¯Á¤ ¹®ÀÚ¿­(str2)¸¦ Ã£¾Æ¼­ ¿øÇÏ´Â ¹®ÀÚ¿­(replace)·Î ¸ğµÎ ¹Ù²Ù±â
+	 * í•´ë‹¹ ë¬¸ìì—´(str1)ì˜ íŠ¹ì • ë¬¸ìì—´(str2)ë¥¼ ì°¾ì•„ì„œ ì›í•˜ëŠ” ë¬¸ìì—´(replace)ë¡œ ëª¨ë‘ ë°”ê¾¸ê¸°
 	 *
-	 * @param str1          Ä¡È¯ ´ë»ó ¹®ÀÚ¿­
-	 * @param str2          Ä¡È¯ ´ë»ó ¹®ÀÚ
-	 * @param replace       Ä¡È¯µÉ ¹®ÀÚ
-	 * @return String       Ä¡È¯ ´ë»ó ¹®ÀÚ¿­À» Ä¡È¯µÉ ¹®ÀÚ¿­·Î ¹Ù²Û ¹®ÀÚ¿­
+	 * @param str1          ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìì—´
+	 * @param str2          ì¹˜í™˜ ëŒ€ìƒ ë¬¸ì
+	 * @param replace       ì¹˜í™˜ë  ë¬¸ì
+	 * @return String       ì¹˜í™˜ ëŒ€ìƒ ë¬¸ìì—´ì„ ì¹˜í™˜ë  ë¬¸ìì—´ë¡œ ë°”ê¾¼ ë¬¸ìì—´
 	 */
 	public static String replaceAll(String str1, String str2, String replace) {
 		return replaceAll(str1, 0, str2, replace);
 	}
 	
 	/**
-	 * ÇØ´ç ¹®ÀÚ¸¦ ¿ìÆí ¹øÈ£ Çü½ÄÀ¸·Î ¹Ù²Ù±â
+	 * í•´ë‹¹ ë¬¸ìë¥¼ ìš°í¸ ë²ˆí˜¸ í˜•ì‹ìœ¼ë¡œ ë°”ê¾¸ê¸°
 	 *
-	 * @param zipCD     ¿ìÆí¹øÈ£ Çü½ÄÀ¸·Î Ä¡È¯ÇÒ ¹®ÀÚ¿­
-	 * @return String   ¿ìÆí¹øÈ£ Çü½ÄÀ¸·Î Ä¡È¯µÈ ¹®ÀÚ¿­
+	 * @param zipCD     ìš°í¸ë²ˆí˜¸ í˜•ì‹ìœ¼ë¡œ ì¹˜í™˜í•  ë¬¸ìì—´
+	 * @return String   ìš°í¸ë²ˆí˜¸ í˜•ì‹ìœ¼ë¡œ ì¹˜í™˜ëœ ë¬¸ìì—´
 	 */
 	public static String toFormatZip(String zipCD) {
 		if (zipCD == null || zipCD.length() != 6) {
@@ -632,10 +632,10 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * ÇØ´ç ¹®ÀÚÀÇ °ø¹éÁ¦°Å
+	 * í•´ë‹¹ ë¬¸ìì˜ ê³µë°±ì œê±°
 	 *
-	 * @param s         °ø¹é Á¦°Å ´ë»ó ¹®ÀÚ¿­
-	 * @return String   °ø¹éÀÌ Á¦°ÅµÈ ¹®ÀÚ¿­
+	 * @param s         ê³µë°± ì œê±° ëŒ€ìƒ ë¬¸ìì—´
+	 * @return String   ê³µë°±ì´ ì œê±°ëœ ë¬¸ìì—´
 	 */
 	public static String trim(String s) {
 		int st = 0;
