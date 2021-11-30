@@ -24,7 +24,7 @@ public class ChatMgr3 {
 		boolean flag = false;
 		try {
 			con = pool.getConnection();//Connetion 객체는 pool에서 빌려옴
-			sql = "select count(id) from tblMember where id=? and pwd=?";
+			sql = "select count(id) from tblmember where id=? and pwd=?";
 			pstmt = con.prepareStatement(sql);
 			//첫번째 , 두번째 ?에 매개변수 세팅
 			pstmt.setString(1, id);
@@ -50,7 +50,7 @@ public class ChatMgr3 {
 		boolean flag = false;
 		try {
 			con = pool.getConnection();
-			sql = "insert tblMember values(?,?,?,?,?)";
+			sql = "insert tblmember values(?,?,?,?,?)";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, bean.getId());
 			pstmt.setString(2, bean.getPwd());
@@ -75,7 +75,7 @@ public class ChatMgr3 {
 		boolean flag = false;
 		try {
 			con = pool.getConnection();
-			sql = "update tblMember set pwd=?, name=?, phone=?, "
+			sql = "update tblmember set pwd=?, name=?, phone=?, "
 					+ "team=? where id=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, bean.getPwd());
@@ -102,7 +102,7 @@ public class ChatMgr3 {
 		boolean flag = false;
 		try {
 			con = pool.getConnection();
-			sql = "delete from tblMember where id=?";
+			sql = "delete from tblmember where id=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
 			int cnt = pstmt.executeUpdate();
