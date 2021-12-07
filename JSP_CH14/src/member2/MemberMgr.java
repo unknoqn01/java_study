@@ -32,6 +32,7 @@ public class MemberMgr {
 				= new MemberBean (rs.getInt("id"),
 					rs.getString("name"), rs.getString("phone"),
 					rs.getString("team"), rs.getString("address"));
+				vlist.addElement(bean);
 			}
 			
 		} catch (Exception e) {
@@ -165,7 +166,7 @@ public class MemberMgr {
 				bean.setZipcode(rs.getString(1)); //zipcode 컬럼
 				bean.setArea1(rs.getString(2));
 				bean.setArea2(rs.getString(3));
-				bean.setArea3(rs.getString(4));
+				bean.setArea3(rs.getString(4).trim());
 				vlist.addElement(bean);
 			}
 		} catch (Exception e) {
@@ -175,4 +176,31 @@ public class MemberMgr {
 		}
 		return vlist;
 	}
+	//team 리스트
+	public Vector<String> selectTeam() {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = null;
+		Vector<String> vlist = new Vector<String>();
+		try {
+			con = pool.getConnection();
+			sql = "select distinct team from tblmember2";
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				vlist.addElement(rs.getString(1));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			pool.freeConnection(con, pstmt, rs);
+		}
+		return vlist;
+	}
 }
+
+
+
+
+
